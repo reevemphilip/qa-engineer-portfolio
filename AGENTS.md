@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All portfolio copy (profile links, skills, experience, projects) lives in `src/content/site.ts`; pages render from it so new projects/articles are data edits, not layout edits.
+- Each portfolio section is its own route with its own `head()` via `pageMeta()` in `src/lib/seo.ts`, so every page is shareable and indexable.
+- Contact form opens the visitor's email app via `mailto:` (no backend yet); swap `buildMailto` for a server function if real delivery is added.
