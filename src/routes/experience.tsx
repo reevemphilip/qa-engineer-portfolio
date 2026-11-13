@@ -9,7 +9,7 @@ export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: pageMeta(
       "Experience — Reeve Philip, Staff QA Engineer",
-      "Staff QA Engineer at Integral Ad Science and quality engineering leadership at Operative Media.",
+      "Most recently a Staff QA Engineer at Integral Ad Science, working on automation, API, and performance testing. Previously coordinated a distributed QA team at Operative Media.",
     ),
   }),
   component: Experience,
