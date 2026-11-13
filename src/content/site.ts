@@ -142,7 +142,7 @@ export const projects: Project[] = [
     title: "API Testing Framework",
     status: "planned",
     overview:
-      "A typed API testing layer focused on validating behaviour and data — not just that an endpoint returned 200.",
+      "A typed API testing layer focused on validating behavior and data — not just that an endpoint returned 200.",
     tech: ["TypeScript", "Playwright API testing", "Schema validation"],
     challenges: [
       "Reliable test data setup and cleanup",
