@@ -5,8 +5,8 @@ export const profile = {
   name: "Reeve Philip",
   role: "Staff Quality Engineer",
   tagline: "Staff Quality Engineer · Test Automation Architect",
-  // TODO(owner): replace with real contact details.
-  email: "reeve.philip@example.com",
+  // TODO(owner): LinkedIn link and resume PDF are still placeholders.
+  email: "reevemphilip@gmail.com",
   linkedin: "https://www.linkedin.com/in/your-handle",
   github: "https://github.com/reevemphilip",
   resumePdf: "/resume.pdf",
