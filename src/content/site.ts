@@ -1,15 +1,16 @@
 // Single source of truth for portfolio content. Update links, projects and
 // experience here; pages render from this file.
 
+import resumeAsset from "@/assets/reeve-philip-resume.pdf.asset.json";
+
 export const profile = {
   name: "Reeve Philip",
   role: "Staff Quality Engineer",
   tagline: "Staff Quality Engineer · Test Automation Architect",
-  // TODO(owner): LinkedIn link and resume PDF are still placeholders.
   email: "reevemphilip@gmail.com",
-  linkedin: "https://www.linkedin.com/in/your-handle",
+  linkedin: "https://www.linkedin.com/in/reeve-philip-78364611",
   github: "https://github.com/reevemphilip",
-  resumePdf: "/resume.pdf",
+  resumePdf: resumeAsset.url,
   intro:
     "I build automation frameworks that help engineering teams catch issues earlier and release with confidence. My background spans UI, API, backend, and performance testing, but my focus has always been on solving the testing challenges that matter most. I enjoy working across engineering and product teams to improve how quality is built into software.",
 };
