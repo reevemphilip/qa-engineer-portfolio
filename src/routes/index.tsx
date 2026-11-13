@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: pageMeta(
       "Reeve Philip — Staff Quality Engineer & Test Automation Architect",
-      "Building quality into software, not just testing it. Test automation, API validation, CI/CD and AI-assisted quality engineering.",
+      "I build automation frameworks that help engineering teams catch issues earlier and release with confidence — across UI, API, backend and performance testing.",
     ),
   }),
   component: Home,
@@ -61,11 +61,7 @@ function Home() {
           className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground animate-rise"
           style={{ animationDelay: "160ms" }}
         >
-          I'm a Quality Engineering professional who enjoys solving complex testing challenges,
-          building scalable automation frameworks, and helping engineering teams deliver reliable
-          software faster. I specialize in test automation, API and backend validation, CI/CD
-          integration, performance testing, and improving software quality throughout the
-          development lifecycle.
+          {profile.intro}
         </p>
         <div
           className="mt-8 flex flex-wrap gap-3 animate-rise"
