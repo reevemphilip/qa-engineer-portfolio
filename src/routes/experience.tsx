@@ -33,6 +33,7 @@ function Experience() {
             </span>
             <p className="eyebrow">{role.title}</p>
             <h2 className="mt-2 text-2xl font-semibold text-foreground">{role.company}</h2>
+            <p className="mt-1 font-mono text-xs tracking-wider text-muted-foreground">{role.dates}</p>
             <p className="mt-3 leading-relaxed text-muted-foreground">{role.summary}</p>
             <ul className="panel mt-5 space-y-3 p-6">
               {role.focus.map((f) => (

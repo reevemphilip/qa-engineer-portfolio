@@ -69,18 +69,19 @@ export const skillGroups: SkillGroup[] = [
 export type Role = {
   company: string;
   title: string;
+  dates: string;
   summary: string;
   focus: string[];
 };
 
-// Dates and metrics intentionally omitted until provided by the owner.
-// Operative Media title is a placeholder pending the exact title from the resume.
+// Titles and dates verified against the owner's resume.
 // Two Operative Media bullets (automation coverage, engineering/product partnership) are
 // held back until verified against the resume.
 export const experience: Role[] = [
   {
     company: "Integral Ad Science (IAS)",
     title: "Staff QA Engineer",
+    dates: "02/2021 - 08/2026",
     summary:
       "Hands-on automation work across UI, API, backend, and performance testing, along with helping teams decide where testing mattered most before each release.",
     focus: [
@@ -95,7 +96,8 @@ export const experience: Role[] = [
   },
   {
     company: "Operative Media",
-    title: "[Job title — to be confirmed]",
+    title: "QA Lead / Senior QA Engineer",
+    dates: "09/2009 - 09/2015",
     summary:
       "Coordinated testing across a distributed QA team and helped the team document and run tests more consistently. This was technical coordination and mentoring, not direct people management.",
     focus: [
