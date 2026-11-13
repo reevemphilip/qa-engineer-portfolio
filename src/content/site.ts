@@ -73,31 +73,34 @@ export type Role = {
 };
 
 // Dates and metrics intentionally omitted until provided by the owner.
+// Operative Media title is a placeholder pending the exact title from the resume.
+// Two Operative Media bullets (automation coverage, engineering/product partnership) are
+// held back until verified against the resume.
 export const experience: Role[] = [
   {
     company: "Integral Ad Science (IAS)",
     title: "Staff QA Engineer",
     summary:
-      "Hands-on automation engineering and framework architecture, paired with the quality strategy work that decides where that automation should point.",
+      "Hands-on automation work across UI, API, backend, and performance testing, along with helping teams decide where testing mattered most before each release.",
     focus: [
-      "Build and maintain test automation frameworks that other engineers can understand and extend.",
-      "Improve regression efficiency so the suite gives faster, more meaningful feedback.",
-      "Integrate automated testing into CI/CD workflows so results arrive with every change.",
-      "Work with engineering and product teams to identify release risks early and reduce them.",
-      "Establish testing standards and help raise testing practices across teams.",
-      "Mentor engineers on automation design, debugging and test strategy.",
+      "Built and maintained UI and API automation frameworks using Playwright, TypeScript, and Cypress, organized so other engineers could understand and extend them.",
+      "Validated backend services and APIs beyond what the UI could show, including integrations and data correctness.",
+      "Performed performance testing to evaluate system behavior under load and identify potential performance bottlenecks.",
+      "Integrated automated testing into CI/CD workflows and optimized regression execution through risk-based test selection, parallel execution, and sharding to improve feedback speed and efficiency.",
+      "Worked with developers, product managers, and engineering teams to identify release risks early and give a clear picture of what had and hadn't been tested.",
+      "Developed a proof of concept using Claude and Playwright MCP to generate automated tests from Jira requirements, leveraging existing page objects and fixtures. Evaluated generated tests for correctness, duplicate locators, and invalid scenarios, with human review as part of the workflow.",
+      "Mentored engineers on automation design, debugging, and test strategy.",
     ],
   },
   {
     company: "Operative Media",
-    title: "Quality Engineering Leadership",
+    title: "[Job title — to be confirmed]",
     summary:
-      "Led quality engineering efforts — setting direction for how the team tested, and coordinating the people doing it.",
+      "Coordinated testing across a distributed QA team and helped the team document and run tests more consistently. This was technical coordination and mentoring, not direct people management.",
     focus: [
-      "Established testing standards and processes for the QA team.",
-      "Mentored and coordinated QA engineers across workstreams.",
-      "Built and maintained automated test coverage.",
-      "Partnered with engineering and product to surface and reduce release risk.",
+      "Coordinated testing activities across a distributed team of more than ten onshore and offshore QA engineers.",
+      "Introduced TestRail to standardize test documentation and execution tracking, so the team had one shared view of what had been tested.",
+      "Mentored and coached engineers on testing practices and automation.",
     ],
   },
 ];
