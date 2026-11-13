@@ -63,7 +63,7 @@
   --animate-line: line-in 0.35s ease-out both;
 }
 
-/* Dark-only theme: navy base, mint signal colour. */
+/* Dark-only theme: navy base, mint signal color. */
 :root {
   --radius: 0.75rem;
   --background: oklch(0.205 0.038 252);

@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: pageMeta(
       "About — Reeve Philip, Staff QA Engineer",
-      "Staff QA Engineer at Integral Ad Science. Hands-on automation work, regression testing, mentoring QA engineers and helping teams make informed release decisions.",
+      "Most recently a Staff QA Engineer at Integral Ad Science. Hands-on automation, API and backend testing, performance testing, and helping teams make informed release decisions.",
     ),
   }),
   component: About,
@@ -16,24 +16,24 @@ export const Route = createFileRoute("/about")({
 
 const principles = [
   {
-    title: "Automation has to earn its place",
-    body: "A suite nobody trusts is just noise. I build automation that's fast, stable and tells you something useful when it fails — then I keep it that way.",
+    title: "Build automation that delivers value",
+    body: "Automation should make testing more reliable and efficient, not just increase the number of automated tests. I focus on critical workflows, maintainable frameworks, and useful feedback.",
   },
   {
-    title: "Test where the risk is",
-    body: "Not every feature deserves the same depth. I map coverage to what would actually hurt users or the business, and use that to make release-readiness calls with confidence.",
+    title: "Focus on risk, not just coverage",
+    body: "Not every feature needs the same level of testing. I prioritize business-critical workflows and areas where failures would have the greatest impact on customers or the business.",
   },
   {
-    title: "Quality is a team sport",
-    body: "The best bugs to find are the ones that never get written. I work closely with developers, product managers and DevOps so testing shapes decisions early, not just at the end.",
+    title: "Quality is a shared responsibility",
+    body: "Quality shouldn't be something QA checks only at the end. I believe developers, QA, product, and DevOps all have a role in identifying issues early and delivering reliable software.",
   },
   {
-    title: "Make other engineers better",
-    body: "Mentoring is part of the job. I'd rather leave a team that writes good tests without me than be the only person who understands the framework.",
+    title: "Help other engineers grow",
+    body: "I enjoy mentoring engineers, sharing automation practices, and making frameworks easier for others to contribute to. A good framework should help the entire team become more effective.",
   },
   {
-    title: "Build for the next person",
-    body: "Frameworks outlive their authors. I favour clear structure, sensible conventions and boring, readable code over clever abstractions.",
+    title: "Keep solutions practical and maintainable",
+    body: "I prefer clear, reusable code and straightforward framework designs over unnecessary complexity. The goal is to build something the team can understand, maintain, and improve over time.",
   },
 ];
 
@@ -42,25 +42,33 @@ function About() {
     <>
       <PageIntro index="01" eyebrow="about" title="Hands-on engineer. Quality strategist.">
         <p>
-          I'm a Staff QA Engineer at Integral Ad Science (IAS), and before that I worked in quality
-          engineering at Operative Media. Most days I'm still hands-on: designing automation
-          frameworks, writing tests, and tracking down the failures that keep a suite from being
-          trusted.
+          Most recently, I worked as a Staff QA Engineer at Integral Ad Science (IAS), where I
+          focused on automation, backend and API validation, performance testing, and improving
+          software quality throughout the development process.
         </p>
         <p className="mt-4">
-          A lot of my work is about making regression testing worth running — trimming what
-          doesn't add value, speeding up what does, and making sure a failure points somewhere
-          useful. When the feedback is fast and reliable, teams actually use it.
+          I enjoy the hands-on side of engineering, especially building automation frameworks,
+          troubleshooting test failures, and finding ways to make regression testing faster and
+          more reliable. For me, automation isn't just about increasing test coverage. It's about
+          giving engineering teams feedback they can actually trust.
         </p>
         <p className="mt-4">
-          I spend just as much time with product managers and developers as I do in code. Talking
-          through risk early shapes what we test, and it means that when a release decision comes
-          up, the team has real information to go on instead of a gut feeling.
+          I also work closely with developers and product managers to understand requirements,
+          identify risks early, and decide where testing will have the greatest impact. When it's
+          time to release, I believe QA should provide a clear picture of what's been tested, what
+          hasn't, and any remaining risks so the team can make an informed decision.
         </p>
         <p className="mt-4">
-          I also mentor QA engineers and help shape how teams approach testing — from framework
-          conventions to where automation should and shouldn't go. I like being the person who
-          can write the code and also help decide what the code should be doing.
+          Earlier in my career at Operative Media, I helped coordinate a distributed QA team of
+          more than ten engineers across onshore and offshore locations. I introduced TestRail to
+          help standardize test documentation and execution tracking, and coached engineers on
+          testing approaches and automation practices. This was a technical coordination and
+          mentoring role, not direct people management.
+        </p>
+        <p className="mt-4">
+          What I enjoy most is combining hands-on engineering with helping teams improve how they
+          approach quality. I like building practical solutions, sharing knowledge, and making
+          testing a shared responsibility across engineering and product.
         </p>
       </PageIntro>
 
@@ -83,9 +91,9 @@ function About() {
         <SectionTitle>Who I work with</SectionTitle>
         <div className="grid gap-3 sm:grid-cols-3">
           {[
-            ["Developers", "Testability, code review, shared ownership of the suite."],
-            ["Product managers", "Acceptance criteria, risk trade-offs, release decisions."],
-            ["DevOps", "Pipelines, environments, and fast feedback on every change."],
+            ["Developers", "Testability, automation, troubleshooting, and shared ownership of software quality."],
+            ["Product managers", "Clarifying requirements, acceptance criteria, risk assessment, and informed release decisions."],
+            ["DevOps", "CI/CD integration, test execution efficiency, environments, and reliable feedback."],
           ].map(([who, what]) => (
             <div key={who} className="panel p-5">
               <p className="font-mono text-sm font-semibold text-primary">{who}</p>
