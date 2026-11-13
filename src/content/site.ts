@@ -10,6 +10,8 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/your-handle",
   github: "https://github.com/your-handle",
   resumePdf: "/resume.pdf",
+  intro:
+    "I build automation frameworks that help engineering teams catch issues earlier and release with confidence. My background spans UI, API, backend, and performance testing, but my focus has always been on solving the testing challenges that matter most. I enjoy working across engineering and product teams to improve how quality is built into software.",
 };
 
 export const nav = [

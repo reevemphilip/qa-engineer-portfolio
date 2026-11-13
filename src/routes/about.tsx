@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: pageMeta(
       "About — Reeve Philip, Staff QA Engineer",
-      "Staff QA Engineer at Integral Ad Science. Hands-on automation architect focused on risk-based testing, release readiness and mentoring.",
+      "Staff QA Engineer at Integral Ad Science. Hands-on automation work, regression testing, mentoring QA engineers and helping teams make informed release decisions.",
     ),
   }),
   component: About,
@@ -42,15 +42,25 @@ function About() {
     <>
       <PageIntro index="01" eyebrow="about" title="Hands-on engineer. Quality strategist.">
         <p>
-          I'm a Staff QA Engineer at Integral Ad Science (IAS), and before that I led quality
-          engineering work at Operative Media. I still spend a lot of my time in the code —
-          designing frameworks, writing tests, and debugging the failures nobody else wants to
-          touch.
+          I'm a Staff QA Engineer at Integral Ad Science (IAS), and before that I worked in quality
+          engineering at Operative Media. Most days I'm still hands-on: designing automation
+          frameworks, writing tests, and tracking down the failures that keep a suite from being
+          trusted.
         </p>
         <p className="mt-4">
-          But a growing part of my work happens before a single test is written: figuring out
-          where the real risk lives, what's worth automating, and how a team knows a release is
-          actually ready.
+          A lot of my work is about making regression testing worth running — trimming what
+          doesn't add value, speeding up what does, and making sure a failure points somewhere
+          useful. When the feedback is fast and reliable, teams actually use it.
+        </p>
+        <p className="mt-4">
+          I spend just as much time with product managers and developers as I do in code. Talking
+          through risk early shapes what we test, and it means that when a release decision comes
+          up, the team has real information to go on instead of a gut feeling.
+        </p>
+        <p className="mt-4">
+          I also mentor QA engineers and help shape how teams approach testing — from framework
+          conventions to where automation should and shouldn't go. I like being the person who
+          can write the code and also help decide what the code should be doing.
         </p>
       </PageIntro>
 
