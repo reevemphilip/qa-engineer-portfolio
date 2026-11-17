@@ -67,6 +67,18 @@ function AiPage() {
       </section>
 
       <section className="mt-20">
+        <SectionTitle>Testing an AI product: IAS Agent</SectionTitle>
+        <div className="panel p-6">
+          <p className="leading-relaxed text-muted-foreground">
+            At Integral Ad Science, I built UI and API automated tests for IAS Agent, an AI-powered
+            product. One of the challenges was validating responses that weren't always identical,
+            so I focused on checking whether the expected numerical values were present and within
+            acceptable thresholds.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-20">
         <SectionTitle>Why review matters</SectionTitle>
         <p className="mb-6 max-w-2xl leading-relaxed text-muted-foreground">
           AI-generated tests can look convincing and still be wrong. A test that passes for the

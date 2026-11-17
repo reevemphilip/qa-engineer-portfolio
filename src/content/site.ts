@@ -74,9 +74,8 @@ export type Role = {
   focus: string[];
 };
 
-// Titles and dates verified against the owner's resume.
-// Two Operative Media bullets (automation coverage, engineering/product partnership) are
-// held back until verified against the resume.
+// Titles, dates and bullets come from the owner's own LinkedIn profile and resume.
+// Roles are listed newest first, one entry per title.
 export const experience: Role[] = [
   {
     company: "Integral Ad Science (IAS)",
@@ -90,20 +89,99 @@ export const experience: Role[] = [
       "Performed performance testing to evaluate system behavior under load and identify potential performance bottlenecks.",
       "Integrated automated testing into CI/CD workflows and optimized regression execution through risk-based test selection, parallel execution, and sharding to improve feedback speed and efficiency.",
       "Worked with developers, product managers, and engineering teams to identify release risks early and give a clear picture of what had and hadn't been tested.",
+      "Developed UI and API automated tests for IAS Agent, validating AI-powered functionality and non-deterministic responses by checking that expected numerical values were present and within acceptable thresholds.",
       "Developed a proof of concept using Claude and Playwright MCP to generate automated tests from Jira requirements, leveraging existing page objects and fixtures. Evaluated generated tests for correctness, duplicate locators, and invalid scenarios, with human review as part of the workflow.",
       "Mentored engineers on automation design, debugging, and test strategy.",
     ],
   },
   {
-    company: "Operative Media",
-    title: "QA Lead / Senior QA Engineer",
-    dates: "09/2009 - 09/2015",
+    company: "Integral Ad Science (IAS)",
+    title: "Quality Assurance Lead",
+    dates: "03/2017 - 02/2021",
     summary:
-      "Coordinated testing across a distributed QA team and helped the team document and run tests more consistently. This was technical coordination and mentoring, not direct people management.",
+      "Led quality assurance efforts for advertising measurement products, focusing on automation, data accuracy, regulatory compliance, and release readiness.",
     focus: [
-      "Coordinated testing activities across a distributed team of more than ten onshore and offshore QA engineers.",
-      "Introduced TestRail to standardize test documentation and execution tracking, so the team had one shared view of what had been tested.",
-      "Mentored and coached engineers on testing practices and automation.",
+      "Led testing efforts for Media Rating Council (MRC) audits, achieving 100% audit-compliance accuracy.",
+      "Expanded UI automation and regression test coverage by 35%.",
+      "Performed performance and load testing using Apache JMeter to identify potential scalability and reliability issues.",
+      "Improved test data management and validation processes to support more reliable testing.",
+      "Coordinated user acceptance testing (UAT) and worked closely with product and engineering teams to identify risks before release.",
+      "Promoted risk-based testing, early defect identification, and continuous improvement of QA practices.",
+    ],
+  },
+  {
+    company: "Integral Ad Science (IAS)",
+    title: "Senior QA Engineer",
+    dates: "09/2015 - 03/2017",
+    summary:
+      "Owned QA testing and release readiness for advertising measurement products across web and video platforms, with a focus on automation, application reliability, and compliance testing.",
+    focus: [
+      "Maintained a 99%+ zero-defect release record while overseeing QA release management and deployment readiness.",
+      "Achieved 100% on-time deployment readiness through structured release validation and quality checks.",
+      "Developed and maintained automated UI regression tests, expanding coverage of critical business workflows.",
+      "Performed performance testing to identify application bottlenecks and establish performance baselines.",
+      "Designed risk-based test strategies covering functional, integration, regression, and exploratory testing.",
+      "Investigated production issues, identified defects, and worked with developers to validate fixes.",
+      "Collaborated with product and engineering teams to clarify requirements, assess release risks, and improve software quality.",
+    ],
+  },
+  {
+    company: "Operative Media",
+    title: "QA Analyst",
+    dates: "03/2013 - 09/2015",
+    summary:
+      "Worked closely with product and engineering teams to ensure the quality and reliability of advertising management applications.",
+    focus: [
+      "Reviewed business requirements and acceptance criteria to identify testing gaps and potential risks early in development.",
+      "Designed and executed functional, integration, regression, and end-to-end test scenarios.",
+      "Used SQL to validate backend data and verify consistency between application behavior and database records.",
+      "Investigated complex application and production issues, working with developers to identify root causes and validate fixes.",
+      "Participated in Agile ceremonies, feature demonstrations, release validation, and Tier 3 production support.",
+    ],
+  },
+  {
+    company: "Operative Media",
+    title: "QA Lead",
+    dates: "03/2011 - 03/2013",
+    summary:
+      "Provided technical leadership and coordinated testing activities across a distributed team of QA engineers.",
+    focus: [
+      "Coordinated and mentored a team of 10+ onshore and offshore QA engineers, establishing consistent testing practices and quality standards.",
+      "Introduced TestRail and standardized test documentation and execution processes, improving test traceability and team execution efficiency by 30%.",
+      "Developed risk-based test strategies and coordinated functional, integration, regression, and release testing.",
+      "Guided team members in adopting automation and improving their technical testing skills.",
+      "Worked with product managers, developers, and distributed QA teams to clarify requirements, prioritize testing, and communicate release risks.",
+      "Promoted quality as a shared responsibility across engineering and product teams.",
+    ],
+  },
+  {
+    company: "Operative Media",
+    title: "Senior QA Engineer",
+    dates: "02/2010 - 03/2011",
+    summary:
+      "Focused on expanding automated testing, improving regression coverage, and validating complex application workflows.",
+    focus: [
+      "Developed and maintained automated functional and regression tests for web applications.",
+      "Executed automated tests through Jenkins to support continuous integration and release validation.",
+      "Performed SQL-based backend testing and data reconciliation to verify application accuracy.",
+      "Conducted integration, cross-browser, configuration, and performance testing.",
+      "Investigated application defects and collaborated with developers to troubleshoot issues and verify fixes.",
+      "Supported software releases through test planning, execution, and defect analysis.",
+    ],
+  },
+  {
+    company: "Operative Media",
+    title: "QA Engineer",
+    dates: "06/2009 - 02/2010",
+    summary:
+      "Performed hands-on software testing for advertising management applications, focusing on functionality, reliability, and data accuracy.",
+    focus: [
+      "Created and executed test cases based on product requirements and business workflows.",
+      "Performed functional, regression, integration, and cross-browser testing.",
+      "Documented software defects, reproduced reported issues, and verified fixes.",
+      "Used SQL queries to validate application data against backend database records.",
+      "Collaborated with developers and product teams to ensure new features met business requirements.",
+      "Supported release testing and maintained QA documentation.",
     ],
   },
 ];
