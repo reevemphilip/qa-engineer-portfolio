@@ -42,33 +42,40 @@ function About() {
     <>
       <PageIntro index="01" eyebrow="about" title="Hands-on engineer. Quality strategist.">
         <p>
-          Most recently, I worked as a Staff QA Engineer at Integral Ad Science (IAS), where I
-          focused on automation, backend and API validation, performance testing, and improving
-          software quality throughout the development process.
+          I'm a quality engineering professional who enjoys solving complex testing challenges,
+          building reliable automation, and helping teams release software with confidence.
         </p>
         <p className="mt-4">
-          I enjoy the hands-on side of engineering, especially building automation frameworks,
-          troubleshooting test failures, and finding ways to make regression testing faster and
-          more reliable. For me, automation isn't just about increasing test coverage. It's about
-          giving engineering teams feedback they can actually trust.
+          My background includes designing and scaling test automation frameworks, API and backend
+          validation, performance testing, and integrating automated testing into CI/CD pipelines.
+          I've worked extensively with Playwright, TypeScript, Cypress, and Python, focusing on the
+          business-critical workflows where automation delivers the most value.
         </p>
         <p className="mt-4">
-          I also work closely with developers and product managers to understand requirements,
-          identify risks early, and decide where testing will have the greatest impact. When it's
-          time to release, I believe QA should provide a clear picture of what's been tested, what
-          hasn't, and any remaining risks so the team can make an informed decision.
+          At Integral Ad Science, I worked closely with engineering, product, and DevOps teams to
+          improve test coverage, identify risks early, and strengthen release quality. I believe
+          quality is a shared responsibility, and I enjoy bringing teams together to make testing
+          more effective without slowing down development.
         </p>
         <p className="mt-4">
-          Earlier in my career at Operative Media, I helped coordinate a distributed QA team of
-          more than ten engineers across onshore and offshore locations. I introduced TestRail to
-          help standardize test documentation and execution tracking, and coached engineers on
-          testing approaches and automation practices. This was a technical coordination and
-          mentoring role, not direct people management.
+          I'm also exploring how AI can improve quality engineering. I've worked on a proof of
+          concept using Claude and Playwright MCP to generate automated tests from Jira
+          requirements and support test triage, while keeping human review central to ensuring
+          accuracy and reliability.
         </p>
         <p className="mt-4">
-          What I enjoy most is combining hands-on engineering with helping teams improve how they
-          approach quality. I like building practical solutions, sharing knowledge, and making
-          testing a shared responsibility across engineering and product.
+          Beyond hands-on automation, I enjoy mentoring engineers, improving testing practices, and
+          finding practical ways to reduce repetitive manual work.
+        </p>
+        <p className="mt-4">
+          I'm interested in Staff, Senior Staff, Lead Quality Engineering, SDET, and Test
+          Automation Architect opportunities where I can combine hands-on engineering with
+          automation strategy, AI-assisted testing, and continuous improvement.
+        </p>
+        <p className="mt-4">
+          Core skills: Playwright | TypeScript | Cypress | Python | API Testing | Test Automation
+          Architecture | CI/CD | Backend &amp; Data Validation | Performance Testing | AI-Assisted
+          Testing | Quality Engineering Strategy
         </p>
       </PageIntro>
 
