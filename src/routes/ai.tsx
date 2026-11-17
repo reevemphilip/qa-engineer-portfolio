@@ -8,7 +8,7 @@ export const Route = createFileRoute("/ai")({
   head: () => ({
     meta: pageMeta(
       "AI in Quality Engineering — Reeve Philip",
-      "A proof of concept using Claude and Playwright MCP to generate Playwright tests from Jira requirements, with human review built in.",
+      "Two areas of AI experience: testing the AI-powered IAS Agent application, and contributing to an AI-assisted test generation proof of concept using Claude and Playwright MCP.",
     ),
   }),
   component: AiPage,
@@ -40,14 +40,29 @@ function AiPage() {
     <>
       <PageIntro index="05" eyebrow="ai & innovation" title="AI writes the draft. Engineers own the result.">
         <p>
-          I've been experimenting with AI-assisted quality engineering in a practical way: can an
-          LLM turn a Jira requirement into a Playwright test that actually belongs in our
-          framework? My proof of concept uses Claude and Playwright MCP to find out.
+          My AI experience falls into two areas: testing an AI-powered application, and using AI
+          to help write automated tests.
         </p>
       </PageIntro>
 
       <section>
-        <SectionTitle>The proof of concept</SectionTitle>
+        <SectionTitle>AI Application Testing — IAS Agent</SectionTitle>
+        <div className="panel p-6">
+          <p className="leading-relaxed text-muted-foreground">
+            Developed UI and API automation tests to validate nondeterministic AI responses,
+            including extracting numerical values and verifying that they fell within acceptable
+            thresholds.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-20">
+        <SectionTitle>AI-Assisted Test Automation — Claude and Playwright MCP</SectionTitle>
+        <p className="mb-6 max-w-2xl leading-relaxed text-muted-foreground">
+          Contributed to a proof of concept using Claude and Playwright MCP to generate automated
+          tests from Jira requirements, leveraging existing page objects and fixtures while
+          maintaining human review.
+        </p>
         <ol className="panel divide-y divide-border/60 overflow-hidden">
           {pipeline.map((p, i) => (
             <li key={p.step} className="flex gap-5 p-5 sm:p-6">
@@ -64,18 +79,6 @@ function AiPage() {
             </li>
           ))}
         </ol>
-      </section>
-
-      <section className="mt-20">
-        <SectionTitle>Testing an AI product: IAS Agent</SectionTitle>
-        <div className="panel p-6">
-          <p className="leading-relaxed text-muted-foreground">
-            At Integral Ad Science, I built UI and API automated tests for IAS Agent, an AI-powered
-            product. One of the challenges was validating responses that weren't always identical,
-            so I focused on checking whether the expected numerical values were present and within
-            acceptable thresholds.
-          </p>
-        </div>
       </section>
 
       <section className="mt-20">
