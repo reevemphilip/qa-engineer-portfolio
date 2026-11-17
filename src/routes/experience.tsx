@@ -9,7 +9,7 @@ export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: pageMeta(
       "Experience — Reeve Philip, Staff QA Engineer",
-      "Most recently a Staff QA Engineer at Integral Ad Science, working on automation, API, and performance testing. Previously coordinated a distributed QA team at Operative Media.",
+      "Staff QA Engineer, QA Lead, and Senior QA Engineer at Integral Ad Science, and earlier QA engineering and QA lead roles at Operative Media — automation, API, and performance testing throughout.",
     ),
   }),
   component: Experience,
@@ -20,14 +20,14 @@ function Experience() {
     <>
       <PageIntro index="03" eyebrow="experience" title="Where I've done the work.">
         <p>
-          Two roles, one through-line: building automation that teams rely on, and helping those
-          teams ship with less risk.
+          Seven roles across two companies, one through-line: building automation that teams rely
+          on, and helping those teams ship with less risk.
         </p>
       </PageIntro>
 
       <ol className="relative space-y-10 border-l border-border pl-8">
         {experience.map((role, i) => (
-          <li key={role.company} className="relative animate-rise" style={{ animationDelay: `${i * 100}ms` }}>
+          <li key={`${role.company}-${role.title}`} className="relative animate-rise" style={{ animationDelay: `${i * 100}ms` }}>
             <span className="absolute -left-[37px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-primary bg-background">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             </span>
