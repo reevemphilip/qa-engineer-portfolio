@@ -90,7 +90,7 @@ export const experience: Role[] = [
       "Integrated automated testing into CI/CD workflows and optimized regression execution through risk-based test selection, parallel execution, and sharding to improve feedback speed and efficiency.",
       "Worked with developers, product managers, and engineering teams to identify release risks early and give a clear picture of what had and hadn't been tested.",
       "Developed UI and API automated tests for IAS Agent, validating AI-powered functionality and non-deterministic responses by checking that expected numerical values were present and within acceptable thresholds.",
-      "Developed a proof of concept using Claude and Playwright MCP to generate automated tests from Jira requirements, leveraging existing page objects and fixtures. Evaluated generated tests for correctness, duplicate locators, and invalid scenarios, with human review as part of the workflow.",
+      "Contributed to a proof of concept using Claude and Playwright MCP to generate automated tests from Jira requirements, leveraging existing page objects and fixtures. Evaluated generated tests for correctness, duplicate locators, and invalid scenarios, with human review as part of the workflow.",
       "Mentored engineers on automation design, debugging, and test strategy.",
     ],
   },
@@ -172,7 +172,7 @@ export const experience: Role[] = [
   {
     company: "Operative Media",
     title: "QA Engineer",
-    dates: "06/2009 - 02/2010",
+    dates: "09/2009 - 02/2010",
     summary:
       "Performed hands-on software testing for advertising management applications, focusing on functionality, reliability, and data accuracy.",
     focus: [

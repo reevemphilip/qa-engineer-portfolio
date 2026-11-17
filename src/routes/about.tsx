@@ -58,6 +58,13 @@ function About() {
           more effective without slowing down development.
         </p>
         <p className="mt-4">
+          Earlier in my career at Operative Media, I helped coordinate a distributed QA team of
+          more than ten engineers across onshore and offshore locations. I introduced TestRail to
+          help standardize test documentation and execution tracking, and mentored engineers on
+          testing approaches and automation practices. This was a technical coordination and
+          mentoring role, not direct people management.
+        </p>
+        <p className="mt-4">
           I'm also exploring how AI can improve quality engineering. I've worked on a proof of
           concept using Claude and Playwright MCP to generate automated tests from Jira
           requirements and support test triage, while keeping human review central to ensuring
