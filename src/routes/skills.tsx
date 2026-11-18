@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bot, Code2, Database, GitBranch, ShieldCheck } from "lucide-react";
+import { Bot, Code2, Database, Gauge, GitBranch, MonitorSmartphone, ShieldCheck } from "lucide-react";
 
 import { CtaBand } from "@/components/site/CtaBand";
 import { PageIntro } from "@/components/site/PageIntro";
@@ -9,8 +9,8 @@ import { pageMeta } from "@/lib/seo";
 export const Route = createFileRoute("/skills")({
   head: () => ({
     meta: pageMeta(
-      "Technical Skills — Reeve Philip",
-      "Playwright, Cypress, TypeScript, Python, API and backend testing, CI/CD, test strategy, performance testing and AI-assisted test generation.",
+      "Technical Skills & Expertise — Reeve Philip",
+      "Automation with Playwright, Cypress, Selenium, TypeScript, and Python; API, backend, and data validation; CI/CD; performance testing with JMeter and k6; quality engineering strategy; and AI & LLM testing.",
     ),
   }),
   component: Skills,
@@ -20,6 +20,8 @@ const icons: Record<string, typeof Code2> = {
   automation: Code2,
   api: Database,
   cicd: GitBranch,
+  performance: Gauge,
+  devices: MonitorSmartphone,
   qe: ShieldCheck,
   ai: Bot,
 };
@@ -27,10 +29,11 @@ const icons: Record<string, typeof Code2> = {
 function Skills() {
   return (
     <>
-      <PageIntro index="02" eyebrow="skills" title="The toolkit.">
+      <PageIntro index="02" eyebrow="skills" title="Technical Skills & Expertise">
         <p>
-          Tools change. The underlying skill — knowing what to test, how deep to go, and how to
-          get trustworthy answers quickly — doesn't. Here's what I work with today.
+          My technical experience spans automation framework development, API and backend
+          validation, performance testing, CI/CD, and quality engineering strategy. I also explore
+          practical applications of AI in software testing.
         </p>
       </PageIntro>
 

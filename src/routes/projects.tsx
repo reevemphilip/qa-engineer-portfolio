@@ -11,8 +11,8 @@ import { pageMeta } from "@/lib/seo";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: pageMeta(
-      "Projects — Reeve Philip, Test Automation Architect",
-      "Quality engineering projects: Playwright + TypeScript framework, API testing, CI/CD integration, AI-assisted test generation and performance testing.",
+      "Engineering Portfolio — Reeve Philip",
+      "Planned personal engineering projects in test automation, quality engineering, and AI: a Playwright + TypeScript framework, API testing, CI/CD integration, LLM testing, and performance testing with JMeter and k6.",
     ),
   }),
   component: Projects,
@@ -21,11 +21,11 @@ export const Route = createFileRoute("/projects")({
 function Projects() {
   return (
     <>
-      <PageIntro index="04" eyebrow="projects" title="Engineering work, in the open.">
+      <PageIntro index="04" eyebrow="projects" title="Engineering Portfolio">
         <p>
-          Practical quality engineering projects, each with the challenges and architecture
-          decisions behind it. Projects are marked planned or in progress until the repository is
-          public.
+          A growing collection of personal engineering projects focused on test automation,
+          quality engineering, and AI. These projects are designed to demonstrate practical
+          solutions to real software testing challenges.
         </p>
       </PageIntro>
 

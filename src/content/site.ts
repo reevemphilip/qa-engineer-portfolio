@@ -29,40 +29,75 @@ export type SkillGroup = { id: string; title: string; blurb: string; items: stri
 export const skillGroups: SkillGroup[] = [
   {
     id: "automation",
-    title: "Test Automation",
-    blurb: "Writing and architecting the code that tests the code.",
-    items: ["Playwright", "Cypress", "TypeScript", "JavaScript", "Python", "Selenium"],
+    title: "Automation & Programming",
+    blurb: "Frameworks and languages for web, API, and mobile test automation.",
+    items: ["Playwright", "Cypress", "Selenium", "TypeScript", "JavaScript", "Python", "PyTest", "Appium"],
   },
   {
     id: "api",
-    title: "API & Backend Testing",
-    blurb: "Checking what the UI can't see — contracts, integrations and the data itself.",
-    items: ["API validation", "Backend testing", "Integration testing", "Data validation"],
+    title: "API, Backend & Data",
+    blurb: "Validation below the UI: services, integrations, and the data itself.",
+    items: [
+      "REST APIs",
+      "Postman",
+      "API validation",
+      "Backend testing",
+      "Integration testing",
+      "Data validation",
+      "SQL",
+      "Snowflake",
+      "Databricks",
+    ],
   },
   {
     id: "cicd",
     title: "CI/CD & Engineering",
-    blurb: "Getting trustworthy results in front of engineers on every change.",
-    items: ["Continuous integration", "Git", "GitHub", "Parallel execution", "Test sharding"],
+    blurb: "Running automated tests in pipelines and keeping feedback fast.",
+    items: ["Jenkins", "GitHub Actions", "Git", "Docker", "Parallel execution", "Test sharding"],
+  },
+  {
+    id: "performance",
+    title: "Performance Testing",
+    blurb: "Checking how systems behave under load.",
+    items: ["JMeter", "k6", "Load testing"],
+  },
+  {
+    id: "devices",
+    title: "Cross-Browser & Mobile",
+    blurb: "Testing across browsers, devices, and platforms.",
+    items: ["BrowserStack", "Sauce Labs", "Appium"],
   },
   {
     id: "qe",
-    title: "Quality Engineering",
-    blurb: "Deciding what to test, how deep, and when a release is ready.",
+    title: "Quality Engineering & Leadership",
+    blurb: "Deciding what to test, how deep, and when a release is ready, and helping teams do the same.",
     items: [
+      "Automation framework architecture",
       "Test strategy",
-      "Automation framework design",
+      "Risk-based testing",
+      "Exploratory testing",
       "Regression optimization",
-      "Performance testing",
       "Release readiness",
       "TestRail",
+      "Jira",
+      "Agile/Scrum",
+      "Mentoring",
+      "Code review",
     ],
   },
   {
     id: "ai",
-    title: "AI in Quality Engineering",
-    blurb: "Using LLMs to speed up test authoring — with a human firmly in the loop.",
-    items: ["Claude", "Playwright MCP", "AI-assisted test generation", "Human-in-the-loop validation"],
+    title: "AI & LLM Testing",
+    blurb: "Testing AI-powered features and using AI to assist test creation, with human review.",
+    items: [
+      "Claude",
+      "Claude Code",
+      "ChatGPT",
+      "Playwright MCP",
+      "AI-assisted test generation",
+      "Nondeterministic response validation",
+      "Human-in-the-loop validation",
+    ],
   },
 ];
 
@@ -188,16 +223,17 @@ export const experience: Role[] = [
 
 export type ProjectStatus = "planned" | "in-progress" | "complete";
 
+// Personal portfolio projects, separate from professional work. Objectives and design
+// considerations describe what each project is meant to do, not completed work.
+// Keep every project "planned" until the owner says development has started.
 export type Project = {
   slug: string;
   title: string;
   status: ProjectStatus;
   overview: string;
   tech: string[];
-  challenges: string[];
-  decisions: string[];
-  /** Set once the repository is public. */
-  repo: string | null;
+  objectives: string[];
+  considerations: string[];
 };
 
 export const projects: Project[] = [
@@ -206,96 +242,91 @@ export const projects: Project[] = [
     title: "Playwright + TypeScript Automation Framework",
     status: "planned",
     overview:
-      "A reference framework showing how I structure UI automation for a real team: page objects, typed fixtures, environment config and reporting that's actually useful when a CI run goes red.",
+      "A planned reference framework for UI automation, structured around page objects, typed fixtures, environment configuration, and reporting that helps explain failed CI runs.",
     tech: ["Playwright", "TypeScript", "GitHub Actions"],
-    challenges: [
-      "Keeping tests independent so they stay safe to run in parallel",
-      "Removing flakiness caused by timing and shared state",
-      "Making a failure debuggable from CI artifacts alone",
+    objectives: [
+      "Keep tests independent so they can run safely in parallel",
+      "Reduce flakiness caused by timing and shared state",
+      "Make failures debuggable from CI artifacts alone",
     ],
-    decisions: [
-      "Fixtures over base-class inheritance for setup and teardown",
-      "Page objects that expose user intent, not raw selectors",
-      "Role-based locators first, test IDs as the fallback",
-      "Sharding configured from day one rather than retrofitted",
+    considerations: [
+      "Fixtures rather than base-class inheritance for setup and teardown",
+      "Page objects that describe user actions, not raw selectors",
+      "Role-based locators first, with test IDs as a fallback",
+      "Sharding planned from the start rather than added later",
     ],
-    repo: null,
   },
   {
     slug: "api-framework",
     title: "API Testing Framework",
     status: "planned",
     overview:
-      "A typed API testing layer focused on validating behavior and data — not just that an endpoint returned 200.",
+      "A planned API testing layer focused on validating behavior and data, not just status codes.",
     tech: ["TypeScript", "Playwright API testing", "Schema validation"],
-    challenges: [
+    objectives: [
       "Reliable test data setup and cleanup",
-      "Catching contract drift between services",
-      "Asserting on data correctness, not only status codes",
+      "Detect contract changes between services",
+      "Assert on data correctness, not only status codes",
     ],
-    decisions: [
-      "Typed clients per service so tests read like the domain",
+    considerations: [
+      "Typed clients per service so tests read clearly",
       "Schema validation on every response",
-      "Data builders instead of shared fixtures files",
+      "Data builders instead of shared fixture files",
     ],
-    repo: null,
   },
   {
     slug: "cicd-integration",
     title: "CI/CD Test Automation Integration",
     status: "planned",
     overview:
-      "A pipeline design that balances fast pull-request feedback against full regression coverage, with results engineers will actually read.",
+      "A planned pipeline design that balances fast pull-request feedback with full regression coverage.",
     tech: ["GitHub Actions", "Playwright sharding", "Git"],
-    challenges: [
-      "Fast feedback on PRs without losing regression depth",
-      "Handling flaky tests without hiding real failures",
-      "Merging and surfacing results from parallel shards",
+    objectives: [
+      "Fast feedback on pull requests without losing regression depth",
+      "Handle flaky tests without hiding real failures",
+      "Combine and report results from parallel shards",
     ],
-    decisions: [
-      "Tiered runs: a focused suite on PRs, full regression on a schedule",
-      "Shard across runners, then merge into a single report",
-      "Retries are tracked and reported, never silently absorbed",
+    considerations: [
+      "Tiered runs: a focused suite on pull requests, full regression on a schedule",
+      "Shard across runners, then merge results into a single report",
+      "Track and report retries rather than silently absorbing them",
     ],
-    repo: null,
   },
   {
-    slug: "ai-test-generation",
-    title: "AI-Assisted Test Generation with LLMs + Playwright MCP",
-    status: "in-progress",
+    slug: "ai-agent-llm-testing",
+    title: "AI Agent Development & LLM Testing",
+    status: "planned",
     overview:
-      "A proof of concept using Claude and Playwright MCP to turn Jira requirements into Playwright tests that follow existing page object models and reusable fixtures.",
-    tech: ["Claude", "Playwright MCP", "Playwright", "TypeScript", "Jira"],
-    challenges: [
-      "Generated tests inventing or duplicating locators",
-      "Scenarios that look plausible but aren't valid for the product",
-      "Keeping output consistent with framework conventions",
+      "A planned personal project to build a small AI agent and explore how to test LLM-powered features whose responses aren't always identical.",
+    tech: ["LLMs", "AI agents", "Playwright", "TypeScript"],
+    objectives: [
+      "Validate nondeterministic responses with checks that tolerate variation",
+      "Define what counts as a correct or acceptable response",
+      "Explore repeatable ways to evaluate agent behavior",
     ],
-    decisions: [
-      "Give the model the framework's conventions and page objects as context",
-      "Reuse existing page objects and fixtures rather than raw selectors",
-      "Every generated test goes through human review before it merges",
+    considerations: [
+      "Threshold and content-based assertions instead of exact-match comparisons",
+      "A fixed set of test prompts to compare behavior over time",
+      "Human review of results the automated checks can't judge",
     ],
-    repo: null,
   },
   {
     slug: "performance-testing",
-    title: "Performance Testing Projects",
+    title: "Performance Testing Framework — JMeter & k6",
     status: "planned",
     overview:
-      "Load and performance testing experiments that answer a practical question: how does this service behave when real traffic shows up?",
-    tech: ["Performance testing", "Tooling under evaluation"],
-    challenges: [
-      "Designing load profiles that resemble real usage",
-      "Separating test-harness noise from real regressions",
-      "Turning results into decisions a team can act on",
+      "A planned performance testing project using JMeter and k6 to evaluate how a service behaves under load.",
+    tech: ["JMeter", "k6", "Load testing"],
+    objectives: [
+      "Design load profiles that resemble realistic usage",
+      "Separate test-harness noise from real performance changes",
+      "Present results in a way a team can act on",
     ],
-    decisions: [
-      "Start from clear performance goals before writing scripts",
-      "Version load scripts alongside the code they exercise",
-      "Track trends over time rather than single-run numbers",
+    considerations: [
+      "Define performance goals before writing scripts",
+      "Version load scripts alongside the code they test",
+      "Compare trends over time rather than single runs",
     ],
-    repo: null,
   },
 ];
 

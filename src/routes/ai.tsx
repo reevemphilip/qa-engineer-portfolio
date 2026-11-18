@@ -8,7 +8,7 @@ export const Route = createFileRoute("/ai")({
   head: () => ({
     meta: pageMeta(
       "AI in Quality Engineering — Reeve Philip",
-      "Two areas of AI experience: testing the AI-powered IAS Agent application, and contributing to an AI-assisted test generation proof of concept using Claude and Playwright MCP.",
+      "Two areas of AI experience: testing the AI-powered IAS Agent application, and contributing to a Claude and Playwright MCP proof of concept that generated candidate tests for human review.",
     ),
   }),
   component: AiPage,
@@ -16,17 +16,18 @@ export const Route = createFileRoute("/ai")({
 
 const pipeline = [
   { step: "jira", title: "Start from the requirement", body: "A Jira ticket's description and acceptance criteria are the input." },
-  { step: "claude", title: "Claude + Playwright MCP", body: "The model explores the running app through Playwright MCP to understand real page structure." },
-  { step: "generate", title: "Generate against the framework", body: "Tests are written using existing page object models and reusable fixtures — not one-off selectors." },
-  { step: "review", title: "Human review", body: "Every generated test is reviewed before it's trusted. This step is not optional." },
-  { step: "merge", title: "Merge into the suite", body: "Accepted tests join the regular suite and run in CI like everything else." },
+  { step: "claude", title: "Claude + Playwright MCP", body: "The model explores the application through Playwright MCP to understand the real page structure." },
+  { step: "generate", title: "Generate candidate tests", body: "Candidate tests are drafted using the existing page objects and fixtures." },
+  { step: "review", title: "Review correctness", body: "Each candidate test is reviewed by a person to confirm it actually verifies the requirement." },
+  { step: "validate", title: "Validate locators and scenarios", body: "Check for duplicate or invented locators and for scenarios that aren't valid for the product." },
+  { step: "conventions", title: "Evaluate framework conventions", body: "Assess whether the test follows the existing framework's structure, naming, and fixtures." },
 ];
 
 const reviewChecks = [
   ["Correctness", "Does the test actually verify the requirement, or just click through it?"],
   ["Duplicate locators", "Did the model create a new locator for something a page object already exposes?"],
   ["Invalid scenarios", "Is this a flow real users can reach, or a plausible-sounding invention?"],
-  ["Convention fit", "Does it use our fixtures, naming and structure — or will it rot the framework?"],
+  ["Convention fit", "Does it follow the existing fixtures, naming, and structure?"],
 ];
 
 const next = [

@@ -1,5 +1,3 @@
-import { Github } from "lucide-react";
-
 import type { Project } from "@/content/site";
 
 import { StatusBadge } from "./StatusBadge";
@@ -29,9 +27,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
 
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <div>
-          <h4 className="eyebrow mb-3">Engineering challenges</h4>
+          <h4 className="eyebrow mb-3">Objectives</h4>
           <ul className="space-y-2 text-sm text-foreground/85">
-            {project.challenges.map((c) => (
+            {project.objectives.map((c) => (
               <li key={c} className="flex gap-2">
                 <span className="text-warning">!</span>
                 {c}
@@ -40,9 +38,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           </ul>
         </div>
         <div>
-          <h4 className="eyebrow mb-3">Architecture decisions</h4>
+          <h4 className="eyebrow mb-3">Design considerations</h4>
           <ul className="space-y-2 text-sm text-foreground/85">
-            {project.decisions.map((d) => (
+            {project.considerations.map((d) => (
               <li key={d} className="flex gap-2">
                 <span className="text-primary">→</span>
                 {d}
@@ -52,22 +50,6 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         </div>
       </div>
 
-      <div className="mt-6 border-t border-border/60 pt-5">
-        {project.repo ? (
-          <a
-            href={project.repo}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 font-mono text-sm text-primary hover:underline"
-          >
-            <Github className="h-4 w-4" /> View repository
-          </a>
-        ) : (
-          <span className="inline-flex items-center gap-2 font-mono text-sm text-muted-foreground">
-            <Github className="h-4 w-4" /> Repository coming soon
-          </span>
-        )}
-      </div>
     </article>
   );
 }
