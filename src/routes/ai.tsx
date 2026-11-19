@@ -16,7 +16,7 @@ export const Route = createFileRoute("/ai")({
 
 const pipeline = [
   { step: "jira", title: "Start from the requirement", body: "A Jira ticket's description and acceptance criteria are the input." },
-  { step: "claude", title: "Claude + Playwright MCP", body: "The model explores the application through Playwright MCP to understand the real page structure." },
+  { step: "claude", title: "Claude + Playwright MCP", body: "Playwright MCP was used as part of the AI-assisted test generation workflow." },
   { step: "generate", title: "Generate candidate tests", body: "Candidate tests are drafted using the existing page objects and fixtures." },
   { step: "review", title: "Review correctness", body: "Each candidate test is reviewed by a person to confirm it actually verifies the requirement." },
   { step: "validate", title: "Validate locators and scenarios", body: "Check for duplicate or invented locators and for scenarios that aren't valid for the product." },
@@ -103,6 +103,9 @@ function AiPage() {
 
       <section className="mt-20">
         <SectionTitle>What's next</SectionTitle>
+        <p className="mb-6 max-w-2xl leading-relaxed text-muted-foreground">
+          Future areas I'd like to explore. These are ideas, not completed work.
+        </p>
         <ul className="space-y-3">
           {next.map((n) => (
             <li
@@ -111,7 +114,7 @@ function AiPage() {
             >
               <span className="text-foreground/90">{n}</span>
               <span className="shrink-0 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-                exploring
+                future exploration
               </span>
             </li>
           ))}

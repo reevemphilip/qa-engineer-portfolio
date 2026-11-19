@@ -1,3 +1,5 @@
+import { Github } from "lucide-react";
+
 import type { Project } from "@/content/site";
 
 import { StatusBadge } from "./StatusBadge";
@@ -50,6 +52,18 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         </div>
       </div>
 
+      {project.repo && (
+        <div className="mt-6 border-t border-border/60 pt-5">
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 font-mono text-sm text-primary hover:underline"
+          >
+            <Github className="h-4 w-4" /> View repository
+          </a>
+        </div>
+      )}
     </article>
   );
 }

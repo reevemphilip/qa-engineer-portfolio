@@ -86,6 +86,10 @@ function Home() {
 
         <div className="mt-14 animate-rise" style={{ animationDelay: "320ms" }}>
           <TerminalCard />
+          <p className="mt-3 font-mono text-xs text-muted-foreground">
+            <span className="text-primary">#</span> Illustrative test output, not actual project
+            results.
+          </p>
         </div>
       </section>
 
@@ -149,10 +153,6 @@ function Home() {
             </Link>
           ))}
         </div>
-        <p className="mt-6 font-mono text-xs text-muted-foreground">
-          <span className="text-primary">#</span> Technical articles and certifications will be
-          added here as they're published.
-        </p>
       </section>
 
       <CtaBand />

@@ -117,6 +117,17 @@ function About() {
         </div>
       </section>
 
+      <section className="mt-20">
+        <SectionTitle>Education</SectionTitle>
+        <div className="panel p-5">
+          <p className="font-mono text-sm font-semibold text-primary">Queens College</p>
+          <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+            <li>Master of Arts in Computer Science</li>
+            <li>Bachelor of Science in Computer Science</li>
+          </ul>
+        </div>
+      </section>
+
       <CtaBand />
     </>
   );

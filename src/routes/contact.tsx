@@ -65,7 +65,7 @@ function Contact() {
         <div>
           <p className="eyebrow">resume.pdf</p>
           <h2 className="mt-2 text-xl font-semibold text-foreground">Download my resume</h2>
-          <p className="mt-1 text-sm text-muted-foreground">One page, PDF.</p>
+          <p className="mt-1 text-sm text-muted-foreground">Two-page resume, PDF.</p>
         </div>
         <Button asChild variant="hero" size="lg">
           <a href={profile.resumePdf} download>

@@ -225,7 +225,7 @@ export type ProjectStatus = "planned" | "in-progress" | "complete";
 
 // Personal portfolio projects, separate from professional work. Objectives and design
 // considerations describe what each project is meant to do, not completed work.
-// Keep every project "planned" until the owner says development has started.
+// Keep a project "planned" until the owner says development has started.
 export type Project = {
   slug: string;
   title: string;
@@ -234,15 +234,18 @@ export type Project = {
   tech: string[];
   objectives: string[];
   considerations: string[];
+  /** Public repository URL; only set for repositories the owner has shared. */
+  repo?: string;
 };
 
 export const projects: Project[] = [
   {
     slug: "playwright-framework",
     title: "Playwright + TypeScript Automation Framework",
-    status: "planned",
+    status: "in-progress",
     overview:
-      "A planned reference framework for UI automation, structured around page objects, typed fixtures, environment configuration, and reporting that helps explain failed CI runs.",
+      "Development is underway on a reference framework for UI automation, structured around page objects, typed fixtures, environment configuration, and reporting that helps explain failed CI runs. The objectives and design considerations below describe the intended direction.",
+    repo: "https://github.com/reevemphilip/playwright-typescript-automation",
     tech: ["Playwright", "TypeScript", "GitHub Actions"],
     objectives: [
       "Keep tests independent so they can run safely in parallel",
