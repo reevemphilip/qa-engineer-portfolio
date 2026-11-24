@@ -23,9 +23,9 @@ function Projects() {
     <>
       <PageIntro index="04" eyebrow="projects" title="Engineering Portfolio">
         <p>
-          A growing collection of personal engineering projects focused on test automation,
-          quality engineering, and AI. These projects are designed to demonstrate practical
-          solutions to real software testing challenges.
+          A growing collection of personal engineering projects focused on test automation, quality
+          engineering, and AI. These projects are designed to demonstrate practical solutions to
+          real software testing challenges.
         </p>
       </PageIntro>
 

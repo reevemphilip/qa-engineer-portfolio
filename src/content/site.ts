@@ -1,8 +1,6 @@
 // Single source of truth for portfolio content. Update links, projects and
 // experience here; pages render from this file.
 
-import resumeAsset from "@/assets/reeve-philip-resume.pdf.asset.json";
-
 export const profile = {
   name: "Reeve Philip",
   terminalName: "reeve-m-philip",
@@ -11,7 +9,7 @@ export const profile = {
   email: "reevemphilip@gmail.com",
   linkedin: "https://www.linkedin.com/in/reeve-philip-78364611",
   github: "https://github.com/reevemphilip",
-  resumePdf: resumeAsset.url,
+  resumePdf: "/resume.pdf",
   intro:
     "I build automation frameworks that help engineering teams catch issues earlier and release with confidence. My background spans UI, API, backend, and performance testing, but my focus has always been on solving the testing challenges that matter most. I enjoy working across engineering and product teams to improve how quality is built into software.",
 };
@@ -32,7 +30,16 @@ export const skillGroups: SkillGroup[] = [
     id: "automation",
     title: "Automation & Programming",
     blurb: "Frameworks and languages for web, API, and mobile test automation.",
-    items: ["Playwright", "Cypress", "Selenium", "TypeScript", "JavaScript", "Python", "PyTest", "Appium"],
+    items: [
+      "Playwright",
+      "Cypress",
+      "Selenium",
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "PyTest",
+      "Appium",
+    ],
   },
   {
     id: "api",
@@ -71,7 +78,8 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "qe",
     title: "Quality Engineering & Leadership",
-    blurb: "Deciding what to test, how deep, and when a release is ready, and helping teams do the same.",
+    blurb:
+      "Deciding what to test, how deep, and when a release is ready, and helping teams do the same.",
     items: [
       "Automation framework architecture",
       "Test strategy",

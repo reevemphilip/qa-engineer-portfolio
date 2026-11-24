@@ -63,10 +63,7 @@ function Home() {
         >
           {profile.intro}
         </p>
-        <div
-          className="mt-8 flex flex-wrap gap-3 animate-rise"
-          style={{ animationDelay: "240ms" }}
-        >
+        <div className="mt-8 flex flex-wrap gap-3 animate-rise" style={{ animationDelay: "240ms" }}>
           <Button asChild variant="hero" size="lg">
             <Link to="/projects">
               View my projects <ArrowRight />
@@ -109,10 +106,7 @@ function Home() {
       <section className="mt-24">
         <div className="mb-6 flex items-end justify-between gap-4">
           <SectionTitle>Projects</SectionTitle>
-          <Link
-            to="/projects"
-            className="mb-6 font-mono text-xs text-primary hover:underline"
-          >
+          <Link to="/projects" className="mb-6 font-mono text-xs text-primary hover:underline">
             all projects →
           </Link>
         </div>
@@ -126,9 +120,7 @@ function Home() {
             >
               <div>
                 <h3 className="font-semibold text-foreground">{p.title}</h3>
-                <p className="mt-1 font-mono text-xs text-muted-foreground">
-                  {p.tech.join(" · ")}
-                </p>
+                <p className="mt-1 font-mono text-xs text-muted-foreground">{p.tech.join(" · ")}</p>
               </div>
               <StatusBadge status={p.status} />
             </Link>

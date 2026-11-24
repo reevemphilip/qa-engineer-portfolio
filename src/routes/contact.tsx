@@ -67,7 +67,12 @@ function Contact() {
           <h2 className="mt-2 text-xl font-semibold text-foreground">View my resume</h2>
           <p className="mt-1 text-sm text-muted-foreground">Two-page resume, PDF.</p>
         </div>
-        <Button asChild variant="hero" size="lg" className="h-auto min-h-11 shrink-0 whitespace-normal text-center">
+        <Button
+          asChild
+          variant="hero"
+          size="lg"
+          className="h-auto min-h-11 shrink-0 whitespace-normal text-center"
+        >
           <a href={profile.resumePdf} target="_blank" rel="noopener noreferrer">
             <FileText /> View or Download Resume (PDF)
           </a>

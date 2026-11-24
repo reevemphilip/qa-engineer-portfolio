@@ -58,26 +58,26 @@ function About() {
           more effective without slowing down development.
         </p>
         <p className="mt-4">
-          Earlier in my career at Operative Media, I helped coordinate a distributed QA team of
-          more than ten engineers across onshore and offshore locations. I introduced TestRail to
-          help standardize test documentation and execution tracking, and mentored engineers on
-          testing approaches and automation practices. This was a technical coordination and
-          mentoring role, not direct people management.
+          Earlier in my career at Operative Media, I helped coordinate a distributed QA team of more
+          than ten engineers across onshore and offshore locations. I introduced TestRail to help
+          standardize test documentation and execution tracking, and mentored engineers on testing
+          approaches and automation practices. This was a technical coordination and mentoring role,
+          not direct people management.
         </p>
         <p className="mt-4">
           I'm also exploring how AI can improve quality engineering. I've worked on a proof of
-          concept using Claude and Playwright MCP to generate automated tests from Jira
-          requirements and support test triage, while keeping human review central to ensuring
-          accuracy and reliability.
+          concept using Claude and Playwright MCP to generate automated tests from Jira requirements
+          and support test triage, while keeping human review central to ensuring accuracy and
+          reliability.
         </p>
         <p className="mt-4">
           Beyond hands-on automation, I enjoy mentoring engineers, improving testing practices, and
           finding practical ways to reduce repetitive manual work.
         </p>
         <p className="mt-4">
-          I'm interested in Staff, Senior Staff, Lead Quality Engineering, SDET, and Test
-          Automation Architect opportunities where I can combine hands-on engineering with
-          automation strategy, AI-assisted testing, and continuous improvement.
+          I'm interested in Staff, Senior Staff, Lead Quality Engineering, SDET, and Test Automation
+          Architect opportunities where I can combine hands-on engineering with automation strategy,
+          AI-assisted testing, and continuous improvement.
         </p>
         <p className="mt-4">
           Core skills: Playwright | TypeScript | Cypress | Python | API Testing | Test Automation
@@ -91,7 +91,9 @@ function About() {
         <ol className="space-y-4">
           {principles.map((p, i) => (
             <li key={p.title} className="panel flex gap-5 p-6">
-              <span className="font-mono text-sm text-primary">{String(i + 1).padStart(2, "0")}</span>
+              <span className="font-mono text-sm text-primary">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <div>
                 <h3 className="text-lg font-semibold text-foreground">{p.title}</h3>
                 <p className="mt-2 leading-relaxed text-muted-foreground">{p.body}</p>
@@ -105,9 +107,18 @@ function About() {
         <SectionTitle>Who I work with</SectionTitle>
         <div className="grid gap-3 sm:grid-cols-3">
           {[
-            ["Developers", "Testability, automation, troubleshooting, and shared ownership of software quality."],
-            ["Product managers", "Clarifying requirements, acceptance criteria, risk assessment, and informed release decisions."],
-            ["DevOps", "CI/CD integration, test execution efficiency, environments, and reliable feedback."],
+            [
+              "Developers",
+              "Testability, automation, troubleshooting, and shared ownership of software quality.",
+            ],
+            [
+              "Product managers",
+              "Clarifying requirements, acceptance criteria, risk assessment, and informed release decisions.",
+            ],
+            [
+              "DevOps",
+              "CI/CD integration, test execution efficiency, environments, and reliable feedback.",
+            ],
           ].map(([who, what]) => (
             <div key={who} className="panel p-5">
               <p className="font-mono text-sm font-semibold text-primary">{who}</p>

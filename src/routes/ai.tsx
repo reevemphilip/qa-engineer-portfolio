@@ -15,17 +15,44 @@ export const Route = createFileRoute("/ai")({
 });
 
 const pipeline = [
-  { step: "jira", title: "Start from the requirement", body: "A Jira ticket's description and acceptance criteria are the input." },
-  { step: "claude", title: "Claude + Playwright MCP", body: "Playwright MCP was used as part of the AI-assisted test generation workflow." },
-  { step: "generate", title: "Generate candidate tests", body: "Candidate tests are drafted using the existing page objects and fixtures." },
-  { step: "review", title: "Review correctness", body: "Each candidate test is reviewed by a person to confirm it actually verifies the requirement." },
-  { step: "validate", title: "Validate locators and scenarios", body: "Check for duplicate or invented locators and for scenarios that aren't valid for the product." },
-  { step: "conventions", title: "Evaluate framework conventions", body: "Assess whether the test follows the existing framework's structure, naming, and fixtures." },
+  {
+    step: "jira",
+    title: "Start from the requirement",
+    body: "A Jira ticket's description and acceptance criteria are the input.",
+  },
+  {
+    step: "claude",
+    title: "Claude + Playwright MCP",
+    body: "Playwright MCP was used as part of the AI-assisted test generation workflow.",
+  },
+  {
+    step: "generate",
+    title: "Generate candidate tests",
+    body: "Candidate tests are drafted using the existing page objects and fixtures.",
+  },
+  {
+    step: "review",
+    title: "Review correctness",
+    body: "Each candidate test is reviewed by a person to confirm it actually verifies the requirement.",
+  },
+  {
+    step: "validate",
+    title: "Validate locators and scenarios",
+    body: "Check for duplicate or invented locators and for scenarios that aren't valid for the product.",
+  },
+  {
+    step: "conventions",
+    title: "Evaluate framework conventions",
+    body: "Assess whether the test follows the existing framework's structure, naming, and fixtures.",
+  },
 ];
 
 const reviewChecks = [
   ["Correctness", "Does the test actually verify the requirement, or just click through it?"],
-  ["Duplicate locators", "Did the model create a new locator for something a page object already exposes?"],
+  [
+    "Duplicate locators",
+    "Did the model create a new locator for something a page object already exposes?",
+  ],
   ["Invalid scenarios", "Is this a flow real users can reach, or a plausible-sounding invention?"],
   ["Convention fit", "Does it follow the existing fixtures, naming, and structure?"],
 ];
@@ -39,10 +66,14 @@ const next = [
 function AiPage() {
   return (
     <>
-      <PageIntro index="05" eyebrow="ai & innovation" title="AI writes the draft. Engineers own the result.">
+      <PageIntro
+        index="05"
+        eyebrow="ai & innovation"
+        title="AI writes the draft. Engineers own the result."
+      >
         <p>
-          My AI experience falls into two areas: testing an AI-powered application, and using AI
-          to help write automated tests.
+          My AI experience falls into two areas: testing an AI-powered application, and using AI to
+          help write automated tests.
         </p>
       </PageIntro>
 
@@ -68,7 +99,9 @@ function AiPage() {
           {pipeline.map((p, i) => (
             <li key={p.step} className="flex gap-5 p-5 sm:p-6">
               <div className="flex flex-col items-center">
-                <span className="font-mono text-xs text-primary">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-xs text-primary">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">

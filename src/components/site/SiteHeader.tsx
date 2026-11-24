@@ -15,7 +15,8 @@ export function SiteHeader() {
           className="font-mono text-sm text-foreground transition-colors hover:text-primary"
           onClick={() => setOpen(false)}
         >
-          <span className="text-primary">~/</span>{profile.terminalName}
+          <span className="text-primary">~/</span>
+          {profile.terminalName}
           <span className="ml-0.5 inline-block h-4 w-2 translate-y-0.5 bg-primary animate-blink" />
         </Link>
 

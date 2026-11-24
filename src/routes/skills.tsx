@@ -1,5 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bot, Code2, Database, Gauge, GitBranch, MonitorSmartphone, ShieldCheck } from "lucide-react";
+import {
+  Bot,
+  Code2,
+  Database,
+  Gauge,
+  GitBranch,
+  MonitorSmartphone,
+  ShieldCheck,
+} from "lucide-react";
 
 import { CtaBand } from "@/components/site/CtaBand";
 import { PageIntro } from "@/components/site/PageIntro";
