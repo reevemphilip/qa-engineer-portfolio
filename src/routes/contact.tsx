@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Download, Github, Linkedin, Mail, Send } from "lucide-react";
+import { FileText, Github, Linkedin, Mail, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
 import { PageIntro, SectionTitle } from "@/components/site/PageIntro";
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: pageMeta(
       "Resume & Contact — Reeve Philip",
-      "Download Reeve Philip's resume or get in touch about Staff, Lead QA, SDET and Test Automation Architect roles.",
+      "View Reeve Philip's two-page PDF resume or get in touch about Staff, Lead QA, SDET and Test Automation Architect roles.",
     ),
   }),
   component: Contact,
@@ -64,12 +64,12 @@ function Contact() {
       <section className="panel flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
         <div>
           <p className="eyebrow">resume.pdf</p>
-          <h2 className="mt-2 text-xl font-semibold text-foreground">Download my resume</h2>
+          <h2 className="mt-2 text-xl font-semibold text-foreground">View my resume</h2>
           <p className="mt-1 text-sm text-muted-foreground">Two-page resume, PDF.</p>
         </div>
-        <Button asChild variant="hero" size="lg">
-          <a href={profile.resumePdf} download>
-            <Download /> Download PDF
+        <Button asChild variant="hero" size="lg" className="h-auto min-h-11 shrink-0 whitespace-normal text-center">
+          <a href={profile.resumePdf} target="_blank" rel="noopener noreferrer">
+            <FileText /> View or Download Resume (PDF)
           </a>
         </Button>
       </section>

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, Linkedin } from "lucide-react";
+import { ArrowRight, FileText, Linkedin } from "lucide-react";
 
 import { CtaBand } from "@/components/site/CtaBand";
 import { SectionTitle } from "@/components/site/PageIntro";
@@ -73,8 +73,8 @@ function Home() {
             </Link>
           </Button>
           <Button asChild variant="terminal" size="lg">
-            <a href={profile.resumePdf} download>
-              <Download /> Download resume
+            <a href={profile.resumePdf} target="_blank" rel="noopener noreferrer">
+              <FileText /> View Resume
             </a>
           </Button>
           <Button asChild variant="subtle" size="lg">

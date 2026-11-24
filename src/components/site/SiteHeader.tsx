@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-import { nav } from "@/content/site";
+import { nav, profile } from "@/content/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -15,7 +15,7 @@ export function SiteHeader() {
           className="font-mono text-sm text-foreground transition-colors hover:text-primary"
           onClick={() => setOpen(false)}
         >
-          <span className="text-primary">~/</span>reeve-philip
+          <span className="text-primary">~/</span>{profile.terminalName}
           <span className="ml-0.5 inline-block h-4 w-2 translate-y-0.5 bg-primary animate-blink" />
         </Link>
 

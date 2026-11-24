@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RP">
+  <style>:root{--background:#0d1b2a;--primary:#2dd4a8} .background{fill:var(--background)} .mark{fill:none;stroke:var(--primary);stroke-width:5;stroke-linecap:square;stroke-linejoin:miter}</style>
+  <rect class="background" width="64" height="64" rx="8"/>
+  <path class="mark" d="M12 46V18h9c11 0 11 14 0 14h-9m9 0 9 14M38 46V18h8c11 0 11 14 0 14h-8"/>
+</svg>

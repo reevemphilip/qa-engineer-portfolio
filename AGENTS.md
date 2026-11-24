@@ -34,3 +34,5 @@ use the editor.
 - All portfolio copy (profile links, skills, experience, projects) lives in `src/content/site.ts`; pages render from it so new projects/articles are data edits, not layout edits.
 - Each portfolio section is its own route with its own `head()` via `pageMeta()` in `src/lib/seo.ts`, so every page is shareable and indexable.
 - Contact form opens the visitor's email app via `mailto:` (no backend yet); swap `buildMailto` for a server function if real delivery is added.
+- Keep the terminal display name separate from profile destinations so visual name changes never alter personal links.
+- Serve the RP monogram favicon as a real SVG in public and reference it in the root head so browsers use consistent branding.

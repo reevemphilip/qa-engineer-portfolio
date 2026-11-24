@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: pageMeta(
       "Engineering Portfolio — Reeve Philip",
-      "Planned personal engineering projects in test automation, quality engineering, and AI: a Playwright + TypeScript framework, API testing, CI/CD integration, LLM testing, and performance testing with JMeter and k6.",
+      "Personal engineering projects: a Playwright + TypeScript framework in progress, plus planned API testing, CI/CD integration, LLM testing, and performance testing with JMeter and k6.",
     ),
   }),
   component: Projects,

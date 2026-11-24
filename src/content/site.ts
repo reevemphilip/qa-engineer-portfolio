@@ -5,6 +5,7 @@ import resumeAsset from "@/assets/reeve-philip-resume.pdf.asset.json";
 
 export const profile = {
   name: "Reeve Philip",
+  terminalName: "reeve-m-philip",
   role: "Staff Quality Engineer",
   tagline: "Staff Quality Engineer · Test Automation Architect",
   email: "reevemphilip@gmail.com",
